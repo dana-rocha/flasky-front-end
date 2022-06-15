@@ -15,7 +15,7 @@ function App() {
       name : "Carlos Sainz",
       team : null,
       country : "Spain",
-      // handsome : true
+      handsome : true
     }
   ];
 

@@ -27,9 +27,9 @@ const DriverList = (props) => {
 // Expecting an array
 DriverList.propTypes = {
     name : PropTypes.string.isRequired,
-    team : PropTypes.string,
+    team : PropTypes.string.isRequired,
     country : PropTypes.string.isRequired,
-    handsome : PropTypes.bool,
+    handsome : PropTypes.bool.isRequired,
     id : PropTypes.number.isRequired
 };
 
