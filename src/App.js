@@ -13,11 +13,12 @@ function App() {
     {
       id : 1, 
       name : "Carlos Sainz",
-      team : "Ferrari",
+      team : null,
       country : "Spain",
-      handsome : true
+      // handsome : true
     }
   ];
+
   return (
     <div>
       <DriverList drivers={drivers}/>

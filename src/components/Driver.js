@@ -1,4 +1,5 @@
 import './Driver.css';
+import PropTypes from "prop-types";
 
 const Driver = (props) => {
 
@@ -12,6 +13,14 @@ const Driver = (props) => {
         </ul>
     </div>
     );
+};
+
+Driver.propTypes = {
+    name : PropTypes.string.isRequired,
+    team : PropTypes.string.isRequired,
+    country : PropTypes.string.isRequired,
+    handsome : PropTypes.bool.isRequired,
+    id : PropTypes.number.isRequired
 }
 
 export default Driver;
