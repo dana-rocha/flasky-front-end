@@ -1,20 +1,14 @@
 import './Driver.css';
 
-function Driver() {
-    const tsunoda = {
-        name: "Yuki Tsunoda",
-        team: "Alpha Tauri",
-        country: "Japan",
-        handsome: true
-    };
+const Driver = (props) => {
+
     return (
     <div>
-        <h2 className="driver__name">{tsunoda.name}</h2>
+        <h2 className="driver__name">{props.name}</h2>
         <ul>
-            <li>Team: {tsunoda.team}</li>
-            <li>Country: {tsunoda.country}</li>
-            {/* <li>Handsome: {tsunoda.handsome.toString()}</li>  */}
-            <li>Handsome: {tsunoda.handsome ? "Hella fine" : "Not for me"}</li> 
+            <li>Team: {props.team}</li>
+            <li>Country: {props.country}</li>
+            <li>Handsome: {props.handsome ? "Hella fine" : "Not for me"}</li> 
         </ul>
     </div>
     );
