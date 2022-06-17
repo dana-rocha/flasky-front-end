@@ -21,17 +21,29 @@ function App() {
   ]);
 
   const flipHandsome = (id) => {
-    const newDrivers = [];
-    // start with empty array. for specific driver i want to change, change the id and push to array
-    // going through every driver, making a copy of the array with one change
-    // replacing the entire list every single we call this function
+    // const newDrivers = [];
+    // // start with empty array. for specific driver i want to change, change the id and push to array
+    // // going through every driver, making a copy of the array with one change
+    // // replacing the entire list every single we call this function
+    // for (const driver of drivers) {
+    //   if (driver.id === id) {
+    //     // reverses whatever driver.handsome was
+    //     driver.handsome = !driver.handsome;
+    //   }
+    //   newDrivers.push(driver);
+    // }
+    // setDrivers(newDrivers);
+
+    
+    // need to pass in a new array so that React knows that something 
+    // has changed because it needs a new reference 
     for (const driver of drivers) {
       if (driver.id === id) {
         // reverses whatever driver.handsome was
         driver.handsome = !driver.handsome;
       }
-      newDrivers.push(driver);
     }
+    const newDrivers = [...drivers];
     setDrivers(newDrivers);
   };
 
