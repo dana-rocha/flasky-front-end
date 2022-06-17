@@ -2,6 +2,12 @@ import Driver from "./Driver.js";
 import PropTypes from "prop-types";
 
 const DriverList = (props) => {
+    // i have access to props.handsomeCallback but no buttons here
+    // want to pass this down into the driver components 
+
+    // Anytime we want to pass down from parent to child component,
+    // we want to do this through the props
+
     const driverComponents = props.drivers.map((driver) => {
         // turning JS driver objects to actual components 
         // can do this with map or for-loop to add to an array
@@ -18,10 +24,11 @@ const DriverList = (props) => {
                 team={driver.team}
                 country={driver.country}
                 handsome={driver.handsome}
-            />
+                handsomeCallback={driver.handsomeCallback}>
+
+            </Driver>
         )
     }
-
     );
 
     return (
