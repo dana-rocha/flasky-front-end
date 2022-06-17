@@ -24,12 +24,11 @@ const DriverList = (props) => {
                 team={driver.team}
                 country={driver.country}
                 handsome={driver.handsome}
-                handsomeCallback={driver.handsomeCallback}>
-
-            </Driver>
-        )
-    }
-    );
+                handsomeCallback={driver.handsomeCallback}
+                deleteCallback={props.deleteCallback}
+            />
+        );
+    });
 
     return (
         <div>

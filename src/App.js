@@ -30,8 +30,21 @@ function App() {
         // reverses whatever driver.handsome was
         driver.handsome = !driver.handsome;
       }
-      newDrivers.push(driver)
+      newDrivers.push(driver);
     }
+    setDrivers(newDrivers);
+  };
+
+  const deleteDriver = (id) => {
+    const newDrivers = [];
+
+    for (const driver of drivers) {
+      // add every driver to the new list except for the driver we want to delete
+      if (driver.id !== id) {
+        newDrivers.push(driver);
+      }
+    }
+    console.log(newDrivers);
     setDrivers(newDrivers);
   };
 
@@ -40,10 +53,16 @@ function App() {
       {/* no parentheses bc not calling this function right now, passing down the func itself */}
       
       {/* Defining what we want our props object to be */}
-      <DriverList drivers={drivers} handsomeCallback={flipHandsome}/>
+
+      <DriverList 
+      drivers={drivers} 
+      handsomeCallback={flipHandsome} 
+      deleteCallback={deleteDriver}
+      />
+
     </div>
   );
 
-};
+}
 
 export default App;

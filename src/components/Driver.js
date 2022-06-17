@@ -6,9 +6,13 @@ const Driver = (props) => {
     // We are able to pass everything through the props
     // I have access to props.handsomeCallback
 
-    // supplying id  to flipHandsome
+    // supplying id to flipHandsome
     const flipMyHandsome = () => {
         props.handsomeCallback(props.id);
+    };
+
+    const deleteMe = () => {
+        props.deleteCallback(props.id);
     }
 
     return (
@@ -19,6 +23,7 @@ const Driver = (props) => {
                 {/* <li>Country: {country}</li> */}
                 <li>Handsome: {props.handsome ? "Hella fine" : "Not for me"}</li> 
                 <button onClick={flipMyHandsome}>Change Handsomeness</button>
+                <button onClick={deleteMe}>Delete</button>
                 {/* Set Country
                 <input type="text" value={country} 
                 onChange={(event) => setCountry(event.target.value)}></input> */}
@@ -33,6 +38,6 @@ Driver.propTypes = {
     country : PropTypes.string.isRequired,
     handsome : PropTypes.bool,
     id : PropTypes.number.isRequired
-}
+};
 
 export default Driver;
