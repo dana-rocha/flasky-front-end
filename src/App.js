@@ -13,7 +13,7 @@ function App() {
     {
       id : 1, 
       name : "Carlos Sainz",
-      team : null,
+      team : "Ferrari",
       country : "Spain",
       handsome : true
     }
