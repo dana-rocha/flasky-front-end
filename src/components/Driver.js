@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Driver = (props) => {
     const [handsome, setHandsome] = useState(props.handsome); 
-    const [country, setCountry] = useState(props.country); 
+    // const [country, setCountry] = useState(props.country); 
     const flipHandsomeness = () => {
         // console.log(event);
         if (handsome) {
@@ -22,11 +22,12 @@ const Driver = (props) => {
             <h2 className="driver__name">{props.name}</h2>
             <ul>
                 <li>Team: {props.team}</li>
-                <li>Country: {country}</li>
+                {/* <li>Country: {country}</li> */}
                 <li>Handsome: {handsome ? "Hella fine" : "Not for me"}</li> 
                 <button onClick={flipHandsomeness}>Change Handsomeness</button>
-                Set Country
-                <input type="text" value={country} onChange={(event) => setCountry(event.target.value)}></input>
+                {/* Set Country
+                <input type="text" value={country} 
+                onChange={(event) => setCountry(event.target.value)}></input> */}
             </ul>
         </div>
     );

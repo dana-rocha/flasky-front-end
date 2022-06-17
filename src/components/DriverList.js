@@ -3,8 +3,16 @@ import PropTypes from "prop-types";
 
 const DriverList = (props) => {
     const driverComponents = props.drivers.map((driver) => {
+        // turning JS driver objects to actual components 
+        // can do this with map or for-loop to add to an array
+
+        // array of different driver components
         return (
             <Driver
+                // key helps React keep track of the components
+                // specific to React
+                // key is not accessible
+                key={driver.id}
                 id={driver.id}
                 name={driver.name}
                 team={driver.team}
