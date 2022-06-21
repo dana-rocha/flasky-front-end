@@ -25,6 +25,7 @@ function App() {
     // // start with empty array. for specific driver i want to change, change the id and push to array
     // // going through every driver, making a copy of the array with one change
     // // replacing the entire list every single we call this function
+    
     // for (const driver of drivers) {
     //   if (driver.id === id) {
     //     // reverses whatever driver.handsome was

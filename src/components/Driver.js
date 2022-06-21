@@ -20,7 +20,7 @@ const Driver = (props) => {
             <h2 className="driver__name">{props.name}</h2>
             <ul>
                 <li>Team: {props.team}</li>
-                {/* <li>Country: {country}</li> */}
+                <li>Country: {props.country}</li>
                 <li>Handsome: {props.handsome ? "Hella fine" : "Not for me"}</li> 
                 <button onClick={flipMyHandsome}>Change Handsomeness</button>
                 <button onClick={deleteMe}>Delete</button>
