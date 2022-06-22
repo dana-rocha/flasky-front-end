@@ -40,8 +40,8 @@ function App() {
 
     // need to pass in a new array so that React knows that something 
     // has changed because it needs a new reference 
-    // const newDrivers = [];
 
+    const newDrivers = [];
     for (const driver of drivers) {
       // Initialize new object
       const newDriver = {...driver};
@@ -49,11 +49,10 @@ function App() {
         // reverses whatever driver.handsome was
         newDriver.handsome = !newDriver.handsome;
       }
-      // newDrivers.push(newDriver);
+      newDrivers.push(newDriver);
       // arrays are mutable
-      const newDrivers = [...drivers];
-      setDrivers(newDrivers);
     }
+    setDrivers(newDrivers);
   };
 
   const deleteDriver = (id) => {
