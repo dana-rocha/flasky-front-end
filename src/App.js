@@ -64,7 +64,7 @@ function App() {
         newDrivers.push(driver);
       }
     }
-    console.log(newDrivers);
+
     setDrivers(newDrivers);
   };
 
