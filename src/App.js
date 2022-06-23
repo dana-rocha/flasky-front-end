@@ -70,7 +70,16 @@ function App() {
   };
 
   const addDriver = (driverInfo) => {
-    console.log("addDriver called");
+    // driverInfo is formData (state) in DriverForm.js
+
+    // console.log("addDriver called");
+    axios.post(URL, driverInfo)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   };
 
   return (

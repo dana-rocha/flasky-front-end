@@ -22,8 +22,8 @@ const DriverForm = (props) => {
         // Shows us what's in that text box
         const inputValue = event.target.value;
 
-        console.log(stateName);
-        console.log(inputValue);
+        // console.log(stateName);
+        // console.log(inputValue);
 
         // Okay with shallow copy here because defaultDriver is not nested
         // If it was nested, would need a deeper copy
@@ -39,7 +39,7 @@ const DriverForm = (props) => {
         // Supress refreshing the page and then call addDriverCallback
         event.preventDefault();
 
-        props.addDriverCallback();
+        props.addDriverCallback(formData);
     };
 
     return(
