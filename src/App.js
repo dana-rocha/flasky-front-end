@@ -69,6 +69,10 @@ function App() {
     setDrivers(newDrivers);
   };
 
+  const addDriver = (driverInfo) => {
+    console.log("addDriver called");
+  };
+
   return (
     <div>
       {/* no parentheses bc not calling this function right now, passing down the func itself */}
@@ -81,7 +85,9 @@ function App() {
       deleteCallback={deleteDriver}
       />
 
-      <DriverForm/>
+      <DriverForm
+      addDriverCallback={addDriver}
+      />
 
     </div>
   );
